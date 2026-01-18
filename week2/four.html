@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jan 18th 2026</title>
+  </head>
+  <style>
+    .para {
+      /* padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px; */
+      /* shorthand */
+      /* padding: 20px 20px 20px 20px; */
+      /* padding: top right bottom left */
+      /* padding: 20px means all side; */
+      /* padding: 20px 10px means top-bottom 20px and left-right 10px; */
+      /* padding: 20px 10px 5px means top 20px, left-right 10px and bottom 5px; */
+
+      /* border-width: 1px;
+          border-style: solid;
+          border-color: red;
+          border-top-left-radius: 20px; */
+
+      /* shorthand */
+      /* border-left: 1px solid red; */
+      border: 5px dashed green;
+      border-radius: 15px;
+      margin: 30px 30px 50px 50px; /* all side 30px */
+      padding: 10px;
+    }
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      border-radius: 60px;
+    }
+    .next_para {
+      width: 500px;
+      box-sizing: border-box; /* include padding and border in width, without --> will increase more than given w&h */
+      /* box-sizing: content-box; default */
+      height: 100px;
+      border: 1px solid black;
+      padding: 30px;
+    }
+    /* .box {
+          width: 200px;
+          height: 200px;
+          background-color: red;
+          position: relative; pos only moved; save layout of other elem, other elements does not move, if it is padding, it will move other elements
+          top: 50px; /*push down 50px from original pos
+          left: 30px;
+        }*/
+    /*
+        .box-green {
+          width: 200px;
+          height: 200px;
+          background-color: green;
+        }  */
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      position: absolute; /* remove from normal flow, other elements will move to occupy the space */
+      top: 50px; /*looks at parent, but parent is static so pushes from body (if parent's pos: static) sol: pos: relative*/
+    }
+    .box-green {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+    .parent {
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+      margin-top: 50px;
+      position: relative;
+    }
+    .sub-parent {
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+      margin-left: 100px;
+      margin-top: 100px; /*if pos is static, will skip and look at parent*/
+    }
+  </style>
+  <body>
+    <p class="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, culpa?'
+    </p>
+    <p class="next_para">Lorem ipsum dolor?</p>
+    <div class="parent">
+      <div class="sub-parent">
+        <div class="box"></div>
+      </div>
+    </div>
+    <div class="circle"></div>
+
+    <div class="box-green"></div>
+  </body>
+</html>
