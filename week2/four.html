@@ -35,6 +35,9 @@
       height: 100px;
       background-color: blue;
       border-radius: 60px;
+      /* position: fixed; always fixed relative to viewport */
+      position: sticky; /* behaves like relative until certain scroll point */
+      top: 5px; /* when scrolled*/
     }
     .next_para {
       width: 500px;
@@ -86,6 +89,7 @@
     }
   </style>
   <body>
+    <div class="circle"></div>
     <p class="para">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, culpa?'
     </p>
@@ -95,7 +99,6 @@
         <div class="box"></div>
       </div>
     </div>
-    <div class="circle"></div>
 
     <div class="box-green"></div>
   </body>
