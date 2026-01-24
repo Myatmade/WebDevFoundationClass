@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+      display: flex; /*within container, sort elements into vertical or horizontal layout*/
+      /*flex-direction: column; row-reverse/ column-reverse */
+      /*flex on default will shrink flex-elements regardless of their size*/
+      flex-wrap: wrap; /*if there is no more space in one line, move to next line*/
+      /*flex-wrap: wrap-reverse; reverse the order of lines*/
+      gap: 10px; /*space between elements, 
+      no space at the first and last element, only put space for in-between elements*/
+      align-items: center; /*vertical move: cross axis alignment: start/ end/ center*/
+      /*align-content: space-around; /*space-between, fill the space on above and below lines*/
+      justify-content: center; /*horizontal move: main axis alignment: start/ end/ center/ space-between/ space-around*/
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      /*margin-left: 10px;*/
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box">11</div>
+      <div class="box">12</div>
+    </div>
+  </body>
+</html>

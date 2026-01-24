@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar Practise</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+    .nav {
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 80px;
+      justify-content: space-between;
+    }
+    .items {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .btn {
+      border: none;
+      background-color: blue;
+      border-radius: 100px;
+      color: white;
+      padding: 10px 20px;
+    }
+  </style>
+  <body>
+    <div class="nav">
+      <p class="logo">LOGO</p>
+
+      <ul class="items">
+        <li>Services</li>
+        <li>About</li>
+        <li>Project</li>
+      </ul>
+
+      <button class="btn">Get Started</button>
+    </div>
+  </body>
+</html>

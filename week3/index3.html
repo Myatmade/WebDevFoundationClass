@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /*row, align-items: horizontal, justify-content: vertical*/
+      /*column: align-items: vertical, justify-content: horizontal*/
+      gap: 20px;
+    }
+    .box {
+      flex-basis: 100px; /*width or height depending on flex direction*/
+      color: white;
+      width: 100px;
+      background-color: lightblue;
+    }
+    /*
+    .box-1 {
+      flex-shrink: 0; others will shrink, box-1 will not shrink
+      flex-grow: 2; box-1 will grow to take up available space. 0 or 1. 2 is mulitples of 2
+    }
+    .box-2 {
+      flex-shrink: 0;
+      flex-grow: 1;
+    }*/
+    .box-1 {
+      order: 1; /*first item is at last, order: small to large, default order : 0*/
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box box-1">1</div>
+      <div class="box box-2">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+  </body>
+</html>
