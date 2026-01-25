@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some functions</title>
+  </head>
+  <style>
+    .box {
+      height: 200px;
+      border: 1px solid black;
+    }
+    .child-box {
+      height: 100px;
+      background-color: lightblue;
+      width: calc(
+        100px * 2
+      ); /*max(300px, 200px, 1400px) : takes the maximum value, min()*/
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div class="child-box"></div>
+    </div>
+  </body>
+</html>

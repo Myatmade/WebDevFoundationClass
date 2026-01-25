@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+  </head>
+  <style>
+    .container > p {
+      color: red; /* direct child selector, if container p -> all child in container */
+    }
+    .container > div > p {
+      color: blue;
+    }
+    /*container +p {}  direct adjacent sibling selector, select p immediately after container */
+    /*container ~p {
+      color: green;} general sibling selector, select all p after container */
+    p[name] {
+      color: green;
+    }
+    /*p[name="myat"]{}  more specific selector*/
+
+    /* !important: makes a CSS rule have the highest priority */
+
+    /*
+    Absolute unit
+    px
+    cm
+    mm
+    in
+    pt
+    pc
+    
+    relative unit (depend on other item)
+    em (parent font size) eg. 2em= 32px if parent font size 16px
+    rem (root element default font size) eg. 2rem= 32px if root font size 16px
+    % (depend on parent element) eg. width: 50% if parent width 500px --> 250px
+    vh (viewport height) 1vh = 1% of viewport height (user's device)
+    vw (viewport width) user's device width
+    100vw = full width of device screen
+    100vh = full height of device screen
+    10vw = 10% of device screen width
+    10vh = 10% of device screen height
+    */
+    #text {
+      color: pink;
+    }
+    .test {
+      color: red;
+    }
+    p {
+      color: blue;
+    }
+    /* order of precedence id> class> element */
+    .red-box {
+      width: 200px;
+      height: 200px;
+      /*background-color: red;*/
+      border: 1px solid red;
+      position: absolute;
+      overflow: auto;
+      display: inline-block;
+    }
+    /* .blue-box {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      z-index: 10; position cannot be static
+      position: relative;
+      opacity: 0;
+    }*/
+    span {
+      width: 200px;
+      display: inline-block; /*none*/
+    }
+  </style>
+  <body>
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p name="myat">Lorem ipsum dolor sit.</p>
+    <p name="test" id="text">Lorem ipsum dolor sit.</p>
+    <div class="red-box">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
+      laudantium quidem odio modi quod ratione ut voluptas veritatis, autem
+      natus eveniet adipisci nisi, aperiam harum accusamus vel doloribus ullam
+      sint nam beatae corporis? Quia nemo provident mollitia porro voluptate in.
+      Lorem ipsum dolor sit amet.
+    </div>
+    <span
+      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus,
+      tempore.</span
+    >
+    <div class="blue-box"></div>
+  </body>
+</html>

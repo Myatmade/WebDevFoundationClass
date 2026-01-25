@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo child</title>
+  </head>
+  <style>
+    a {
+      color: blue;
+    }
+    a:visited {
+      color: red;
+    }
+    a:hover {
+      color: green; /* when it is actively pressed*/
+    }
+    a:active {
+      color: orange;
+    }
+    p:first-child {
+      color: purple;
+    }
+    p:last-child {
+      color: brown;
+    }
+    /*other pseudo class: checked, disabled, placeholder, focus*/
+  </style>
+  <body>
+    <a href="https://www.google.com">Google</a>
+    <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </body>
+</html>
