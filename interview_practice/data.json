@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Erika",
+    "age": 22,
+    "country": "Japan"
+  },
+  {
+    "name": "Liam",
+    "age": 25,
+    "country": "Canada"
+  },
+  {
+    "name": "Sophia",
+    "age": 30,
+    "country": "Australia"
+  },
+  {
+    "name": "Noah",
+    "age": 28,
+    "country": "Germany"
+  }
+]

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document4</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center; /*center vertically*/
+      height: 100vh;
+    }
+    .container {
+      width: 600px;
+      height: 300px;
+      border: 1px solid red;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      grid-template-areas:
+        "box1 box2 box2 box3"
+        "box1 box4 box5 box6"
+        "box1 box7 box8 box6";
+    } /*use the template, instead of manual placement*/
+    .box-1 {
+      grid-area: box1;
+      background-color: green;
+    }
+    .box-2 {
+      grid-area: box2;
+      background-color: green;
+    }
+    .box-3 {
+      grid-area: box3;
+      background-color: red;
+    }
+    .box-4 {
+      grid-area: box4;
+      background-color: yellow;
+    }
+    .box-5 {
+      grid-area: box5;
+      background-color: red;
+    }
+    .box-6 {
+      grid-area: box6;
+      background-color: green;
+    }
+    .box-7 {
+      grid-area: box7;
+      background-color: red;
+    }
+    .box-8 {
+      grid-area: box8;
+      background-color: yellow;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box-1"></div>
+      <div class="box-2"></div>
+      <div class="box-3"></div>
+      <div class="box-4"></div>
+      <div class="box-5"></div>
+      <div class="box-6"></div>
+      <div class="box-7"></div>
+      <div class="box-8"></div>
+    </div>
+  </body>
+</html>

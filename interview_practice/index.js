@@ -7,6 +7,12 @@ const person = {
   isStudent: true,
 };
 
+const person2 = { ...person, name: "Jack" };
+console.log("person 2:", person2.name);
+
+const names = ["Anna", "Ben", "Cathy"];
+const names2 = [...names, "David"];
+
 console.log(person.isStudent);
 console.log(username);
 console.log(age);
