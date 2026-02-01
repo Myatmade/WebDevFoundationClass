@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document6</title>
+  </head>
+  <style>
+    /* pseudo elements */
+    p::before {
+      content: "Before"; /*adding text before p*/
+    }
+    p::after {
+      content: "After"; /*adding text after p, in-line element so cannot change width/ height*/
+    }
+    input::placeholder {
+      color: red;
+    }
+    p::selection {
+      background: red;
+      color: white;
+    }
+  </style>
+  <body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <input type="text" placeholder="Enter your name" />
+  </body>
+</html>

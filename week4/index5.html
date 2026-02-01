@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document5</title>
+  </head>
+  <style>
+    :root {
+      --primary-color: red; /*defining a variable, to keep things consistent*/
+    }
+    h1 {
+      --primary-color: blue; /*overriding the variable locally. if root is empty, can only use in h1 related*/
+      color: var(--primary-color); /*using the variable, changed to blue*/
+    }
+    p {
+      color: var(--primary-color);
+    }
+    span {
+      color: var(--primary-color);
+    }
+    .image-container {
+      width: 200px;
+      height: 200px;
+    } /*image adjust according to container; can become distorted */
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /*contain, cover, fill, none, scale-down*/
+      /*object-fit: contain; original aspect ratio kept, but not fill whole container*/
+      /*object-fit: fill; does not keep aspect ratio, fills container*/
+      /*none; original size, no scaling*/
+      /*cover; keeps aspect ratio, fill container, some parts cut off*/
+      object-position: center; /*position of image in container, usually in images too big for container and get cut off*/
+    }
+  </style>
+  <body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <span>Lorem ipsum dolor sit amet consectetur.</span>
+    <div class="image-container">
+      <img src="../week1/cat.jpeg" alt="" />
+    </div>
+  </body>
+</html>

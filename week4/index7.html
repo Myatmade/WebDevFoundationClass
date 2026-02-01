@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document7</title>
+  </head>
+  <style>
+    .red-box {
+      width: 100px;
+      height: 100px;
+      background: blue;
+      /* transform: translateX(100px); /*moves the box 100 px to right*/
+      /*transform: translateY(200px); /*moves the box 200 px down*/
+      /*transform: translate(100px, 200px); moves the box (x,y) 100 px to right and 200 px down*/
+      /*transform: rotate(35deg); /*rotates the box by 35 degrees*/
+      /*if there is multiple transform properties, only the last one will be applied */
+      transform: translateX(100px) rotate(35deg);
+      transition-property: transform; /*all: applies to all properties like transform, background, etc.*/
+      /*transition-property: all 1s linear; shorthand for transition properties*/
+      transition-duration: 0.5s; /*time taken for transition to complete*/
+      transition-delay: 1s; /*waits for 1 second before starting the transition*/
+      transition-timing-function: ease-in-out; /*speed of transition, can define manually with cubic bezier()*/
+    }
+    .red-box:hover {
+      transform: scale(
+        2
+      ); /*transition not smooth without defining transition properties*/
+    }
+    .green-box {
+      width: 100px;
+      height: 100px;
+      background: green;
+      transform: scaleY(
+        1.5
+      ); /*scales the box in y direction by 1.5 times, will not move the other format*/
+      /*transform: scaleX(1.5); scales the box in x direction by 1.5 times*/
+      transform: skew(
+        30deg,
+        20deg
+      ); /*skews the box by 30 degrees in x direction and 20 degrees in y direction*/
+    }
+  </style>
+  <body>
+    <div class="red-box"></div>
+    <div class="green-box"></div>
+  </body>
+</html>
