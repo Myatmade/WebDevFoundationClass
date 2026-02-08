@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+  </head>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+    }
+    /*create a breakpoint for different screen sizes, ordered smallest to largest
+    so that it doesn't override styles for smaller screens*/
+    @media (max-width: 425px) {
+      .box {
+        background-color: lightgray;
+      }
+    }
+    @media (min-width: 768px) {
+      .box {
+        background-color: lightblue;
+      }
+    }
+    @media (min-width: 1024px) {
+      .box {
+        background-color: lightseagreen;
+      }
+    }
+    @media (min-width: 1440px) {
+      .box {
+        background-color: lightcoral;
+      }
+    }
+  </style>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
