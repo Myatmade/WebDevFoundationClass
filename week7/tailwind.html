@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <style type="text/tailwindcss">
+      @theme {
+        --spacing-8xl: 1400px;
+      }
+    </style> -->
+    <title>Tailwind CSS</title>
+  </head>
+  <body class="dark:bg-black bg-white text-white dark:text-black">
+    <div
+      class="flex group sm:bg-slate-800 md:bg-red-200 lg:bg-blue-200 bg-green-500 hover:bg-slate-600 w-fit gap-4 px-7 py-10 mx-auto mt-10 rounded-lg border border-white/10"
+    >
+      <img src="../week1/cat.jpeg" alt="cat" class="w-20" />
+
+      <div>
+        <h1 class="text-white group-hover:text-black text-lg">Chitchat</h1>
+        <p class="text-gray-400 group-hover:text-black text-sm">
+          You have a new message!
+        </p>
+      </div>
+    </div>
+    <input
+      type="text"
+      placeholder="Enter your name"
+      class="bg-white mx-auto block mt-10 outline-none p-5 rounded-lg border border-gray-300 focus:border-blue-500"
+    />
+  </body>
+</html>
