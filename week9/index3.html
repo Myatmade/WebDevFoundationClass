@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 class="heading">
+      <span>Lorem ipsum dolor sit amet.</span>
+      first heading
+    </h1>
+    <h1 id="second-heading">second heading</h1>
+    <div>
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+    <script>
+      //getting element
+      let heading = document.querySelectorAll("#second-heading"); //.heading span
+      let body = document.querySelector("body");
+
+      //   heading.style.border = "1px solid red";
+      //   let headings = document.getElementsByClassName("heading");
+      //   let ids = document.getElementById("second-heading");
+      //   console.log(ids);
+      //    getElementsByTagName
+
+      //   console.log(headings);
+      console.log(heading);
+
+      //creating element in js
+
+      let divElement = document.createElement("div");
+      divElement.innerText = "This is createElement method";
+      divElement.id = "create-method";
+      divElement.style.color = "red";
+
+      //adding to HTML
+      body.appendChild(divElement); //adding to html from js; need to select body because we are adding in body
+
+      //insertBefore(element, referenceElement)
+      body.insertBefore(divElement, heading[0]); //to add before any element
+
+      //remove
+      heading[0].remove(); //to remove element
+      console.log(divElement);
+    </script>
+  </body>
+</html>
